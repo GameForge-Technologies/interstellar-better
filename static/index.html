@@ -27,6 +27,15 @@
       gtag('js', new Date());
       gtag('config', 'G-WKJQ5QHQTJ');
     </script>
+    <script>
+    
+      var isSupportedBrowser = /(Gecko|Chromium)/.test(navigator.userAgent);
+
+      // Redirect to the same website if supported, otherwise redirect to /browsernotsupported
+      if (!isSupportedBrowser) {
+        window.location.href = "/browsernotsupported";
+      }
+    </script>
   </head>
   <body>
     <div class="header2">
@@ -40,67 +49,3 @@
         <a href="settings">Settings</a>
         <a href="about.html">About</a>
         <a href="https://phgroup.createaforum.com/" target="_blank">Interstellar Forum</a>
-      </div>
-    </div>
-    <div id="cookieNotice" class="light display-right" style="display: block;">
-      <div id="closeIcon" style="display: none;"></div>
-      <div class="title-wrap">
-        <h4>Cookie Consent</h4>
-      </div>
-      <div class="content-wrap">
-        <div class="msg-wrap">
-          <p>We use cookies! This website uses cookies or similar technologies, to enhance your browsing experience and provide personalized recommendations. By continuing to use our website, you agree to our <a style="color: grey;" href="cookieconsentpolicy.html">Cookie Policy</a>
-          </p>
-          <div class="btn-wrap">
-            <button class="popupbutton" onclick="acceptCookieConsent();">Accept</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- JavaScript source file -->
-    <script src="assets/js/home/cookie_consent.js"></script>
-    <body class="classic midnight">
-      <canvas class="particles-js-canvas-el" style="z-index:10; top:0; left:0; position:absolute; width: 100%; height: 100%;" width="1920" height="942"></canvas>
-      <div id="particles-js">
-        <script rel="preload" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-        <div class="container">
-          <div class="mainhead">
-            <div class="title">
-              <h1>Interstellar</h1>
-              <h4>Modded and hosted by the PH Group</h4>
-            </div>
-            
-          </div>
-          <br>
-          <br>
-          <p class="text-center">
-            
-          </p>
-          <br>
-          <br>
-          <br>
-          <br>
-        </div>
-      </div>
-      <script>
-        document.querySelector(".discord-btn2").addEventListener("click", () => {
-          window.open("https://discord.gg/gointerstellar", "_blank");
-        });
-      </script>
-      <script>
-        if (localStorage.getItem('cloak')) {
-          const cloakValue = localStorage.getItem('cloak') === 'true' ? 'true' : 'false';
-          document.getElementById('tab-cloak').value = cloakValue;
-        } else {
-          document.getElementById('tab-cloak').value = 'true';
-          localStorage.setItem('cloak', 'true');
-        }
-      </script>
-      <div>
-        <script src="assets/js/particles.js"></script>
-        <script src="/assets/js/themecontrol.js"></script>
-      </div>
-      <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="1920" height="942"></canvas>
-      </div>
-    </body>
-</html>
